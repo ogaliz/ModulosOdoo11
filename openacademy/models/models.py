@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import models, fields #, api
 
-# class openacademy(models.Model):
-#     _name = 'openacademy.openacademy'
+class LibraryBook(models.Model):
+    _name = 'Library.book'
 
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         self.value2 = float(self.value) / 100
+    name = fields.Char(string="Name")
+    active = fields.Boolean("Is active")
+    image = fields.Binary()
+    pages = fields.Integer(string="# Pages")
+    isbn = fields.Char(string="ISBN", size=13)
+
+    # @api.depends('value')
+    # def _value_pc(self):
+    #     self.value2 = float(self.value) / 100
