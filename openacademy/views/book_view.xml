@@ -14,6 +14,7 @@
                         <field name="active" />
                         <field name="pages" />
                         <field name="isbn" />
+                        <field name="category_id" />
                     </group>
                 </sheet>
             </form>
