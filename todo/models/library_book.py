@@ -14,9 +14,7 @@ from odoo import models, fields, api
 #     def _value_pc(self):
 #         self.value2 = float(self.value) / 100
 
-class todo(models.Model):
-    _name = 'todo.todo'
-    _description = 'To-do Task'
-    name = fields.char('Description', required=True);
-    is_done = fields.Boolean('Done?')
-    active = fields.Boolean('Active', default=True);
+class LibraryBook(models.Model):
+    _inherit =  'library.book'
+    
+    date =  fields.Date(string="Release Date")
